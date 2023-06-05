@@ -1,0 +1,8 @@
+.smallCard {
+  width: 200px;
+  height: 220px;
+}
+.smallCardImage {
+ max-width: 100%;
+  max-height: 80%; 
+}
