@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/buy-ship-backoffice/static/css/main.20a067bc.css",
-    "main.js": "/buy-ship-backoffice/static/js/main.2c50bacb.js",
-    "static/js/787.854f3c0d.chunk.js": "/buy-ship-backoffice/static/js/787.854f3c0d.chunk.js",
-    "static/media/nanox3.webp": "/buy-ship-backoffice/static/media/nanox3.e99d10d760d21c783829.webp",
-    "static/media/nike-cortez.webp": "/buy-ship-backoffice/static/media/nike-cortez.b9ffe11865e32aaf2d28.webp",
-    "static/media/Adidas-Gazelle-femme.webp": "/buy-ship-backoffice/static/media/Adidas-Gazelle-femme.d8858281a0b3e3509690.webp",
-    "index.html": "/buy-ship-backoffice/index.html",
-    "main.20a067bc.css.map": "/buy-ship-backoffice/static/css/main.20a067bc.css.map",
-    "main.2c50bacb.js.map": "/buy-ship-backoffice/static/js/main.2c50bacb.js.map",
-    "787.854f3c0d.chunk.js.map": "/buy-ship-backoffice/static/js/787.854f3c0d.chunk.js.map"
+    "main.css": "/Pay-and-Ship-backoffice/static/css/main.20a067bc.css",
+    "main.js": "/Pay-and-Ship-backoffice/static/js/main.84bc4c59.js",
+    "static/js/787.854f3c0d.chunk.js": "/Pay-and-Ship-backoffice/static/js/787.854f3c0d.chunk.js",
+    "static/media/nanox3.webp": "/Pay-and-Ship-backoffice/static/media/nanox3.e99d10d760d21c783829.webp",
+    "static/media/nike-cortez.webp": "/Pay-and-Ship-backoffice/static/media/nike-cortez.b9ffe11865e32aaf2d28.webp",
+    "static/media/Adidas-Gazelle-femme.webp": "/Pay-and-Ship-backoffice/static/media/Adidas-Gazelle-femme.d8858281a0b3e3509690.webp",
+    "index.html": "/Pay-and-Ship-backoffice/index.html",
+    "main.20a067bc.css.map": "/Pay-and-Ship-backoffice/static/css/main.20a067bc.css.map",
+    "main.84bc4c59.js.map": "/Pay-and-Ship-backoffice/static/js/main.84bc4c59.js.map",
+    "787.854f3c0d.chunk.js.map": "/Pay-and-Ship-backoffice/static/js/787.854f3c0d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.20a067bc.css",
-    "static/js/main.2c50bacb.js"
+    "static/js/main.84bc4c59.js"
   ]
 }
