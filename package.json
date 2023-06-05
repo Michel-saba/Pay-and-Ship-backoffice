@@ -2,6 +2,7 @@
   "name": "buy-ship-backoffice",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://michel-saba.github.io/buy-ship-backoffice/",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
