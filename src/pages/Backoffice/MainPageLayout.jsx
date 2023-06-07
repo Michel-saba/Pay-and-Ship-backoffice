@@ -2,32 +2,25 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
-//import AppBar from '@mui/material/AppBar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-// import Badge from '@mui/material/Badge';
-// import Container from '@mui/material/Container';
-// import Grid from '@mui/material/Grid';
-// import Paper from '@mui/material/Paper';
-// import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-// import NotificationsIcon from '@mui/icons-material/Notifications';
-// import MailIcon from '@mui/icons-material/Mail';
-import AccountCircle from '@mui/icons-material/AccountCircle';
+// import AccountCircle from '@mui/icons-material/AccountCircle';
 import MuiAppBar from '@mui/material/AppBar';
-// import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-
 import AddProductForm from '../../components/AddProductForm';
 import ProductList from '../../components/ListProducts';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import PostAddIcon from '@mui/icons-material/PostAdd';
+
 const drawerWidth = 240;
 const appToolBarHieght = 100;
 
@@ -79,6 +72,7 @@ export default function MainPageLayout({ theme }) {
   const [open, setOpen] = React.useState(true);
   const [isAddProduct, setIsAddProduct] = React.useState(false);
   const [isProductList, setIsProductList] = React.useState(true);
+  // const [openToggle, setOpenToggle] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -95,7 +89,9 @@ export default function MainPageLayout({ theme }) {
     setIsProductList(!isProductList);
     setIsAddProduct(false);
   };
-
+  // const handleToggle = () => {
+  //   setOpenToggle(!openToggle);
+  // };
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -119,7 +115,7 @@ export default function MainPageLayout({ theme }) {
             edge='start'
             color='inherit'
             aria-label='menu'
-            sx={{ mr: 2 }}
+            sx={{ mr: 1 }}
           >
             <MenuIcon />
           </IconButton>
@@ -127,7 +123,7 @@ export default function MainPageLayout({ theme }) {
             {'Account Manager'}
           </Typography>
         </Toolbar>
-        <Box
+        {/* <Box
           id='box'
           sx={{ display: { xs: 'none', md: 'flex' }, paddingInline: '20px' }}
         >
@@ -137,10 +133,12 @@ export default function MainPageLayout({ theme }) {
             aria-label='account of current user'
             aria-haspopup='true'
             color='inherit'
+            onClick={handleToggle}
+            sx={{ mr: 4 }}
           >
-            <AccountCircle />
+            <AccountCircle fontSize={'large'} />
           </IconButton>
-        </Box>
+        </Box> */}
       </AppBar>
       <Drawer
         sx={{
@@ -156,11 +154,6 @@ export default function MainPageLayout({ theme }) {
       >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
-            {/* {theme.direction === 'rtl' ? (
-              <ChevronLeftIcon />
-            ) : (
-              <ChevronRightIcon />
-            )} */}
             <ChevronLeftIcon />
           </IconButton>
         </DrawerHeader>
@@ -168,13 +161,17 @@ export default function MainPageLayout({ theme }) {
         <List>
           <ListItem disablePadding>
             <ListItemButton onClick={handleOpenProductList}>
-              <ListItemIcon></ListItemIcon>
+              <ListItemIcon>
+                <FormatListBulletedIcon />
+              </ListItemIcon>
               <ListItemText primary={'List products'} />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
             <ListItemButton onClick={handleOpenAddProductForm}>
-              <ListItemIcon></ListItemIcon>
+              <ListItemIcon>
+                <PostAddIcon />
+              </ListItemIcon>
               <ListItemText primary={'Add New Product'} />
             </ListItemButton>
           </ListItem>

@@ -20,25 +20,13 @@ export default function AddProductForm(props) {
     const data = new FormData(event.currentTarget);
     console.log({
       category: data.get('Category'),
-      password: data.get('password'),
+      description: data.get('Description'),
     });
   };
   const handleHideMessage = () => {
     setShowMessage(false);
   };
-  //   const hiddenFileInput = React.useRef(null);
 
-  // Programatically click the hidden file input element
-  // when the Button component is clicked
-  //   const handleUploadClick = (event) => {
-  //     hiddenFileInput.current.click();
-  //   };
-  //   // Call a function (passed as a prop from the parent component)
-  //   // to handle the user-selected file
-  //   const handleChange = (event) => {
-  //     const fileUploaded = event.target.files[0];
-  //     props.handleFile(fileUploaded);
-  //   };
   return (
     <Container component='main' maxWidth='xs'>
       {showMessage && (
@@ -48,10 +36,9 @@ export default function AddProductForm(props) {
             <DialogContentText id='alert-dialog-description'>
               <p>product has been add successfully</p>
               <p>
-                {' '}
                 generated link :{' '}
-                <a href='https://localhost:3001/?p=2'>
-                  https://payandshipsite/?p=2{' '}
+                <a href='https://michel-saba.github.io/Pay-and-Ship-mockup/?p=2'>
+                  https://michel-saba.github.io/Pay-and-Ship-mockup/?p=2{' '}
                 </a>
               </p>
             </DialogContentText>
@@ -125,7 +112,7 @@ export default function AddProductForm(props) {
               <input hidden accept='image/*' type='file' />
               <PhotoCamera />
             </IconButton>
-            <span>Upload product image</span>
+            <span>Upload product Photo</span>
           </div>
           <Button
             type='submit'
