@@ -20,6 +20,7 @@ const SmallProductCard = ({
   const handleCloseClick = () => {
     setExpanded(false);
   };
+
   return (
     <div>
       <Card className={classes.smallCard} onClick={handleExpandClick}>

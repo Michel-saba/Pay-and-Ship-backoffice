@@ -178,7 +178,9 @@ export default function MainPageLayout({ theme }) {
         </List>
       </Drawer>
       <Main open={open}>
-        {isAddProduct && <AddProductForm />}
+        {isAddProduct && (
+          <AddProductForm onCloseMessage={handleOpenProductList} />
+        )}
         {isProductList && <ProductList />}
       </Main>
     </Box>

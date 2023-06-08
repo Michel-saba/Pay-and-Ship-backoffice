@@ -16,7 +16,7 @@ export const data = [
     mark: 'Adidas',
     imageUrl: ch,
     title: 'Pink Adidas Gazelle',
-    price: '90',
+    price: '100',
     description: 'Brand new pink Adidas Gazelle size 37',
   },
   {
@@ -47,7 +47,7 @@ export const data = [
     mark: 'Adidas',
     imageUrl: gazelle,
     title: 'Adidas Gazelle',
-    price: '100',
+    price: '110',
     description: 'Barely worn blue suede Adidas Gazelle size 41',
   },
   {
@@ -57,7 +57,7 @@ export const data = [
     imageUrl: sneakers_zoro,
     mark: 'sneakers',
     title: 'Sneakers One Piece Zoro',
-    price: '60',
+    price: '65',
     description:
       'discover all of our exclusive sneakers in our brand new website! Delivery guaranteed everywhere in France in less than a week!',
   },
