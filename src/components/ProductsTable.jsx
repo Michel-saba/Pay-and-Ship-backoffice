@@ -1,14 +1,22 @@
 import * as React from 'react';
 // import Box from '@mui/material/Box';
-import { data } from '../data/data';
+
 import IconButton from '@mui/material/IconButton';
 // import EditIcon from '@mui/icons-material/Edit';
 // import DeleteIcon from '@mui/icons-material/Delete';
 // import SaveIcon from '@mui/icons-material/Save';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { DataGrid } from '@mui/x-data-grid';
-
-export default function ProductsTable({ handleOpenCarte, handleOpenLabel }) {
+import labelExample from '../images/label_example.png';
+export default function ProductsTable({
+  handleOpenCarte,
+  handleOpenLabel,
+  data,
+}) {
+  const printLabel = () => {
+    const my_window = window.open(labelExample, 'delivery label');
+    my_window.print();
+  };
   const rows = data;
   const columns = [
     {
@@ -18,14 +26,20 @@ export default function ProductsTable({ handleOpenCarte, handleOpenLabel }) {
     },
     {
       field: 'mark',
-      headerName: 'Mark',
+      headerName: 'Brand',
+      // width: '20%',
+      // editable: true,
+    },
+    {
+      field: 'SKU',
+      headerName: 'SKU',
       // width: '20%',
       // editable: true,
     },
     {
       field: 'title',
       headerName: 'Item',
-      //  width: '25%',
+      width: 160,
       // editable: true,
     },
     {
@@ -54,7 +68,11 @@ export default function ProductsTable({ handleOpenCarte, handleOpenLabel }) {
       headerName: 'print label',
       width: 150,
       renderCell: (row) => (
-        <IconButton onClick={() => handleOpenLabel()} color='inherit'>
+        <IconButton
+          // onClick={() => handleOpenLabel()}
+          onClick={() => printLabel()}
+          color='inherit'
+        >
           <OpenInNewIcon />
         </IconButton>
       ),

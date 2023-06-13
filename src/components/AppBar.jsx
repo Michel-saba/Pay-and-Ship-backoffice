@@ -1,10 +1,10 @@
 import { styled } from '@mui/material/styles';
 import MuiAppBar from '@mui/material/AppBar';
-import dpdLogo from '../images/dpd_logo.png';
+
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+
 //
 import Typography from '@mui/material/Typography';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -26,15 +26,15 @@ const AppBar = styled(MuiAppBar, {
     }),
   }),
 }));
-const appToolBarHieght = 100;
-export default function AppBarMenu({ open, handleDrawerOpen }) {
+const appToolBarHeight = 100;
+export default function AppBarMenu() {
   return (
     <AppBar
       position='fixed'
       color='primary'
       enableColorOnDark
       style={{
-        height: appToolBarHieght,
+        height: appToolBarHeight,
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
@@ -42,7 +42,7 @@ export default function AppBarMenu({ open, handleDrawerOpen }) {
       }}
     >
       <Toolbar>
-        <Typography variant='h6'>{'Product Manager'}</Typography>
+        <Typography variant='h6'>{'Products management'}</Typography>
       </Toolbar>
       <Box
         id='box'

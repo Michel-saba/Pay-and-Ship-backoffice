@@ -13,6 +13,7 @@ export const data = [
     type: 'Baskets',
     gUrl: 'https://michel-saba.github.io/Pay-and-Ship-mockup/?p=1',
     id: 1,
+    SKU: 132587,
     mark: 'Adidas',
     imageUrl: ch,
     title: 'Pink Adidas Gazelle',
@@ -23,6 +24,7 @@ export const data = [
   {
     type: 'Baskets',
     id: 2,
+    SKU: 147587,
     gUrl: 'https://michel-saba.github.io/Pay-and-Ship-mockup/?p=2',
     imageUrl: nanox3,
     mark: 'Reebok',
@@ -35,6 +37,7 @@ export const data = [
   {
     type: 'Baskets',
     id: 3,
+    SKU: 985412,
     gUrl: 'https://michel-saba.github.io/Pay-and-Ship-mockup/?p=3',
     imageUrl: cortez,
     mark: 'Nike',
@@ -47,6 +50,7 @@ export const data = [
     type: 'Baskets',
     gUrl: 'https://michel-saba.github.io/Pay-and-Ship-mockup/?p=4',
     id: 4,
+    SKU: 546325,
     mark: 'Adidas',
     imageUrl: gazelle,
     title: 'Adidas Gazelle',
@@ -57,6 +61,7 @@ export const data = [
   {
     type: 'Baskets',
     id: 5,
+    SKU: 785465,
     gUrl: 'https://michel-saba.github.io/Pay-and-Ship-mockup/?p=5',
     imageUrl: sneakers_zoro,
     mark: 'sneakers',
@@ -70,6 +75,7 @@ export const data = [
   {
     type: 'Baskets',
     id: 6,
+    SKU: 231222,
     gUrl: 'https://michel-saba.github.io/Pay-and-Ship-mockup/?p=6',
     imageUrl: nb550,
     mark: 'NB',
@@ -82,6 +88,7 @@ export const data = [
     type: 'Baskets',
     gUrl: 'https://michel-saba.github.io/Pay-and-Ship-mockup/?p=7',
     id: 7,
+    SKU: 787887,
     mark: 'Adidas',
     imageUrl: nb2002,
     title: 'NB 2002 mule',
@@ -92,6 +99,7 @@ export const data = [
   {
     type: 'Baskets',
     id: 8,
+    SKU: 801860,
     gUrl: 'https://michel-saba.github.io/Pay-and-Ship-mockup/?p=8',
     mark: 'Nike',
     imageUrl: NLD,
@@ -105,6 +113,7 @@ export const data = [
   {
     type: 'Baskets',
     id: 9,
+    SKU: 704512,
     gUrl: 'https://michel-saba.github.io/Pay-and-Ship-mockup/?p=9',
     imageUrl: NikeX,
     mark: 'Nike',

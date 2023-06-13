@@ -10,14 +10,13 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 // import DialogContentText from '@mui/material/DialogContentText';
-import DialogActions from '@mui/material/DialogActions';
-import { data } from '../data/data';
+
 import nb2002 from '../images/NB-2002-Mule4.png';
 
-export default function AddProductForm({ open, onClose }) {
+export default function AddProductForm({ open, onClose, onSave, data }) {
   const handleSubmit = (event) => {
-    event.preventDefault();
     // setShowMessage(true);
+    event.preventDefault();
     const dataForm = new FormData(event.currentTarget);
     const new_product = {
       type: dataForm.get('Category'),
@@ -25,21 +24,27 @@ export default function AddProductForm({ open, onClose }) {
       id: data.length + 1,
       mark: 'Baskets',
       imageUrl: nb2002,
-      title: dataForm.get('Title'),
+      SKU: dataForm.get('SKU'),
+      title: dataForm.get('item'),
       price: dataForm.get('Price'),
       description: dataForm.get('Description'),
+      status: 'available',
     };
 
-    console.log('new_product', new_product);
-
-    onClose(new_product);
+    onSave(new_product);
+    onClose();
   };
 
   return (
-    <Dialog open={open} onClose={onClose}>
+    <Dialog open={open}>
       <DialogTitle> add new product to the list</DialogTitle>
       <DialogContent>
-        <Box component='form' onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+        <Box
+          component='form'
+          onSubmit={handleSubmit}
+          noValidate
+          sx={{ mt: 1, p: 1 }}
+        >
           <TextField
             margin='normal'
             required
@@ -50,6 +55,16 @@ export default function AddProductForm({ open, onClose }) {
             autoFocus
           />
           <TextField
+            margin='normal'
+            required
+            fullWidth
+            name='SKU'
+            label='SKU'
+            type='number'
+            id='SKU'
+          />
+          <TextField
+            margin='normal'
             required
             fullWidth
             name='Price'
@@ -61,9 +76,8 @@ export default function AddProductForm({ open, onClose }) {
             margin='normal'
             required
             fullWidth
-            id='Title'
-            label='Title'
-            name='Title'
+            label='Item'
+            name='item'
           />
           <TextField
             margin='normal'
@@ -82,16 +96,21 @@ export default function AddProductForm({ open, onClose }) {
             <PhotoCamera />
           </IconButton>
           <span>Upload product Photo</span>
-          <Button type='submit' variant='contained'>
-            Add
-          </Button>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Button variant='contained' color='error' onClick={onClose}>
+              Close
+            </Button>
+            <Button
+              type='submit'
+              color='success'
+              variant='contained'
+              //onClick={handleSubmit()}
+            >
+              Save
+            </Button>
+          </div>
         </Box>
       </DialogContent>
-      <DialogActions>
-        <Button variant='contained' onClick={onClose}>
-          Close
-        </Button>
-      </DialogActions>
     </Dialog>
     // <Container component='main' maxWidth='xs'>
     //   {showMessage && (
