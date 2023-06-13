@@ -20,17 +20,12 @@ export default function SignIn({ onSignIn }) {
   const handleSubmit = (event) => {
     onSignIn();
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    //  const data = new FormData(event.currentTarget);
   };
 
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container component='main' maxWidth='xs'>
-        <CssBaseline />
         <Box
           sx={{
             marginTop: 8,
@@ -54,7 +49,6 @@ export default function SignIn({ onSignIn }) {
           >
             <TextField
               margin='normal'
-              required
               fullWidth
               id='email'
               label='Email Address'
@@ -64,7 +58,6 @@ export default function SignIn({ onSignIn }) {
             />
             <TextField
               margin='normal'
-              required
               fullWidth
               name='password'
               label='Password'
@@ -77,6 +70,7 @@ export default function SignIn({ onSignIn }) {
               type='submit'
               fullWidth
               variant='contained'
+              color='error'
               sx={{ mt: 3, mb: 2 }}
             >
               Sign In

@@ -1,188 +1,127 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import Drawer from '@mui/material/Drawer';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-// import AccountCircle from '@mui/icons-material/AccountCircle';
-import MuiAppBar from '@mui/material/AppBar';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
+// import CssBaseline from '@mui/material/CssBaseline';
 import AddProductForm from '../../components/AddProductForm';
-import ProductList from '../../components/ListProducts';
-import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+//import ProductList from '../../components/ListProducts';
+import AppBarMenu from '../../components/AppBar';
+import ProductsTable from '../../components/ProductsTable';
 import PostAddIcon from '@mui/icons-material/PostAdd';
 
-const drawerWidth = 240;
-const appToolBarHieght = 100;
-
+// import LargeProductCard from '../../components/LargeProductCard';
+import { data } from '../../data/data';
+import Dialog from '@mui/material/Dialog';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Button, CardActionArea, CardActions } from '@mui/material';
+import labelExample from '../../images/label_example.png';
+import LargeProductCard from '../../components/LargeProductCard';
+import Footer from '../../components/Footer';
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    marginTop: appToolBarHieght,
-    flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: `-${drawerWidth}px`,
-    ...(open && {
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-      marginLeft: 0,
-    }),
+  ({ theme }) => ({
+    marginTop: 100,
+    marginBottom: 20,
+    padding: theme.spacing(4),
+    textAlign: 'left',
   })
 );
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
-})(({ theme, open }) => ({
-  transition: theme.transitions.create(['margin', 'width'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: `${drawerWidth}px`,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
-}));
-const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-  justifyContent: 'flex-end',
-}));
 
 export default function MainPageLayout({ theme }) {
-  const [open, setOpen] = React.useState(true);
   const [isAddProduct, setIsAddProduct] = React.useState(false);
-  const [isProductList, setIsProductList] = React.useState(true);
-  // const [openToggle, setOpenToggle] = React.useState(false);
-
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+  const [openCard, setOpenCard] = React.useState(false);
+  const [selectedItem, setSelectedItem] = React.useState({});
+  const [openLabel, setOpenLabel] = React.useState(false);
   const handleOpenAddProductForm = () => {
-    setIsAddProduct(!isAddProduct);
-    setIsProductList(false);
+    setIsAddProduct(true);
+    // console.log('open');
   };
-  const handleOpenProductList = () => {
-    setIsProductList(!isProductList);
+  const handleCloseAddProductForm = (new_product) => {
+    if (new_product) {
+    }
     setIsAddProduct(false);
   };
-  // const handleToggle = () => {
-  //   setOpenToggle(!openToggle);
-  // };
-  return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
+  const handleOpenCarte = (rowData) => {
+    if (rowData.row) {
+      let result = data.find((item) => item.id === rowData.row.id);
+      setSelectedItem(result);
+      setOpenCard(true);
+    }
+  };
+  const handleOpenLabel = () => {
+    setOpenLabel(true);
+  };
+  const handleCloseLabel = () => {
+    setOpenLabel(false);
+    console.log('close');
+  };
+  const handleCloseCard = () => {
+    setOpenCard(false);
+    setSelectedItem({});
+  };
 
-      <AppBar
-        position='fixed'
-        open={open}
-        color='primary'
-        enableColorOnDark
-        style={{
-          height: appToolBarHieght,
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-      >
-        <Toolbar>
-          <IconButton
-            onClick={handleDrawerOpen}
-            edge='start'
-            color='inherit'
-            aria-label='menu'
-            sx={{ mr: 1 }}
+  return (
+    <>
+      <Box sx={{ display: 'flex' }}>
+        <AppBarMenu></AppBarMenu>
+
+        <Main>
+          <Button
+            variant='contained'
+            sx={{ marginBottom: '40px' }}
+            color='error'
+            startIcon={<PostAddIcon />}
+            onClick={handleOpenAddProductForm}
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant='h6' noWrap component='div' sx={{ flexGrow: 1 }}>
-            {'Account Manager'}
-          </Typography>
-        </Toolbar>
-        {/* <Box
-          id='box'
-          sx={{ display: { xs: 'none', md: 'flex' }, paddingInline: '20px' }}
-        >
-          <IconButton
-            size='large'
-            edge='end'
-            aria-label='account of current user'
-            aria-haspopup='true'
-            color='inherit'
-            onClick={handleToggle}
-            sx={{ mr: 4 }}
-          >
-            <AccountCircle fontSize={'large'} />
-          </IconButton>
-        </Box> */}
-      </AppBar>
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-          },
-        }}
-        variant='persistent'
-        anchor='left'
-        open={open}
-      >
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            <ChevronLeftIcon />
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-        <List>
-          <ListItem disablePadding>
-            <ListItemButton onClick={handleOpenProductList}>
-              <ListItemIcon>
-                <FormatListBulletedIcon />
-              </ListItemIcon>
-              <ListItemText primary={'List products'} />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton onClick={handleOpenAddProductForm}>
-              <ListItemIcon>
-                <PostAddIcon />
-              </ListItemIcon>
-              <ListItemText primary={'Add New Product'} />
-            </ListItemButton>
-          </ListItem>
-        </List>
-      </Drawer>
-      <Main open={open}>
-        {isAddProduct && (
-          <AddProductForm onCloseMessage={handleOpenProductList} />
+            Add new Product
+          </Button>
+          <AddProductForm
+            open={isAddProduct}
+            onClose={handleCloseAddProductForm}
+          ></AddProductForm>
+          {/* {isProductList && <ProductList />}  */}
+          <ProductsTable
+            handleOpenCarte={handleOpenCarte}
+            handleOpenLabel={handleOpenLabel}
+          />
+        </Main>
+        {selectedItem && (
+          <Dialog open={openCard}>
+            <LargeProductCard {...selectedItem} onClose={handleCloseCard} />
+          </Dialog>
         )}
-        {isProductList && <ProductList />}
-      </Main>
-    </Box>
+        <Dialog open={openLabel}>
+          <Card>
+            <CardActionArea>
+              <CardMedia
+                component='img'
+                image={labelExample}
+                alt='delivery label'
+              />
+              <CardContent>
+                <Typography gutterBottom variant='h5' component='div'>
+                  Delivery label example
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size='small'
+                color='error'
+                variant='contained'
+                onClick={handleCloseLabel}
+              >
+                close
+              </Button>
+              <Button size='small' color='error' variant='contained'>
+                Print
+              </Button>
+            </CardActions>
+          </Card>
+        </Dialog>
+      </Box>
+      <Footer />
+    </>
   );
 }

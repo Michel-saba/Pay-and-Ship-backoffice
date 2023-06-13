@@ -16,8 +16,9 @@ export const data = [
     mark: 'Adidas',
     imageUrl: ch,
     title: 'Pink Adidas Gazelle',
-    price: '100',
+    price: 100,
     description: 'Brand new pink Adidas Gazelle size 37',
+    status: 'sold',
   },
   {
     type: 'Baskets',
@@ -26,8 +27,9 @@ export const data = [
     imageUrl: nanox3,
     mark: 'Reebok',
     title: 'Reebok Nano X3',
-    price: '60',
+    price: 60,
     description: 'Barely worn black Reebok Nano X3 size 46',
+    status: 'sold',
   },
 
   {
@@ -37,8 +39,9 @@ export const data = [
     imageUrl: cortez,
     mark: 'Nike',
     title: 'nike-cortez',
-    price: '80',
+    price: 80,
     description: 'Brand new white and green Nike Cortez size 44',
+    status: 'sold',
   },
   {
     type: 'Baskets',
@@ -47,8 +50,9 @@ export const data = [
     mark: 'Adidas',
     imageUrl: gazelle,
     title: 'Adidas Gazelle',
-    price: '110',
+    price: 110,
     description: 'Barely worn blue suede Adidas Gazelle size 41',
+    status: 'sold',
   },
   {
     type: 'Baskets',
@@ -57,9 +61,10 @@ export const data = [
     imageUrl: sneakers_zoro,
     mark: 'sneakers',
     title: 'Sneakers One Piece Zoro',
-    price: '65',
+    price: 65,
     description:
       'discover all of our exclusive sneakers in our brand new website! Delivery guaranteed everywhere in France in less than a week!',
+    status: 'available',
   },
 
   {
@@ -69,8 +74,9 @@ export const data = [
     imageUrl: nb550,
     mark: 'NB',
     title: 'NB 550',
-    price: '190',
+    price: 190,
     description: 'Brand new white and black New Balance 550, size 38',
+    status: 'available',
   },
   {
     type: 'Baskets',
@@ -79,8 +85,9 @@ export const data = [
     mark: 'Adidas',
     imageUrl: nb2002,
     title: 'NB 2002 mule',
-    price: '160',
+    price: 160,
     description: 'Vintage dark blue New Balance 2002 size 43',
+    status: 'available',
   },
   {
     type: 'Baskets',
@@ -89,9 +96,10 @@ export const data = [
     mark: 'Nike',
     imageUrl: NLD,
     title: 'Jordan Low Dunk',
-    price: '130',
+    price: 130,
     description:
       'White, grey and black low dunk Jordans in perfect condition, size 44 ',
+    status: 'available',
   },
 
   {
@@ -101,7 +109,8 @@ export const data = [
     imageUrl: NikeX,
     mark: 'Nike',
     title: 'Nike x Off White',
-    price: '650',
+    price: 650,
     description: 'New Nike Off White collab / never worn / size 43',
+    status: 'available',
   },
 ];

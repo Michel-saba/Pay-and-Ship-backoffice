@@ -23,11 +23,11 @@ function ListOfProducts({ itemsList }) {
 }
 export default function ProductList() {
   const [dataList, setDataList] = useState(data);
-  const [someText, setSomeText] = useState('first');
+
   const sortByPrice = () => {
     const list = dataList.sort((a, b) => a.price - b.price);
-    setDataList(list);
-    setSomeText('sec');
+    setDataList([...list]); //list refere to the same array dataList
+    console.log('sort');
   };
 
   return (
