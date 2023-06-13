@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Pay-and-Ship-backoffice/static/css/main.e6c13ad2.css",
-    "main.js": "/Pay-and-Ship-backoffice/static/js/main.e1a30ccf.js",
+    "main.js": "/Pay-and-Ship-backoffice/static/js/main.df4775ef.js",
     "static/js/787.854f3c0d.chunk.js": "/Pay-and-Ship-backoffice/static/js/787.854f3c0d.chunk.js",
     "static/media/NB-2002-Mule4.png": "/Pay-and-Ship-backoffice/static/media/NB-2002-Mule4.cf4f951c1571f41c94d2.png",
     "static/media/Nike-x-2.png": "/Pay-and-Ship-backoffice/static/media/Nike-x-2.6e2958a6fa81616f4861.png",
@@ -11,15 +11,16 @@
     "static/media/nanox3.webp": "/Pay-and-Ship-backoffice/static/media/nanox3.e99d10d760d21c783829.webp",
     "static/media/Adidas-Gazelle-3.avif": "/Pay-and-Ship-backoffice/static/media/Adidas-Gazelle-3.0f2895c78cad2bf21d78.avif",
     "static/media/nike-cortez.webp": "/Pay-and-Ship-backoffice/static/media/nike-cortez.b9ffe11865e32aaf2d28.webp",
+    "static/media/logo_dpd.jpg": "/Pay-and-Ship-backoffice/static/media/logo_dpd.475122e2747fe1bda541.jpg",
     "static/media/Adidas-Gazelle-femme.webp": "/Pay-and-Ship-backoffice/static/media/Adidas-Gazelle-femme.d8858281a0b3e3509690.webp",
     "static/media/nike-dunk-low2.jpeg": "/Pay-and-Ship-backoffice/static/media/nike-dunk-low2.376815937c1fa9a5e854.jpeg",
     "index.html": "/Pay-and-Ship-backoffice/index.html",
     "main.e6c13ad2.css.map": "/Pay-and-Ship-backoffice/static/css/main.e6c13ad2.css.map",
-    "main.e1a30ccf.js.map": "/Pay-and-Ship-backoffice/static/js/main.e1a30ccf.js.map",
+    "main.df4775ef.js.map": "/Pay-and-Ship-backoffice/static/js/main.df4775ef.js.map",
     "787.854f3c0d.chunk.js.map": "/Pay-and-Ship-backoffice/static/js/787.854f3c0d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.e1a30ccf.js"
+    "static/js/main.df4775ef.js"
   ]
 }
