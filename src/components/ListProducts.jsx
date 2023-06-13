@@ -21,6 +21,11 @@ function ListOfProducts({ itemsList }) {
     </>
   );
 }
+/**
+ * 
+ * @deprecated  not used anymore
+ * 
+ */
 export default function ProductList() {
   const [dataList, setDataList] = useState(data);
 

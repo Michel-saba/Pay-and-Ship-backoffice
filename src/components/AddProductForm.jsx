@@ -19,10 +19,10 @@ export default function AddProductForm({ open, onClose, onSave, data }) {
     event.preventDefault();
     const dataForm = new FormData(event.currentTarget);
     const new_product = {
-      type: dataForm.get('Category'),
+      type: dataForm.get('brand'),
       gUrl: `https://michel-saba.github.io/Pay-and-Ship-mockup/?p=7`,
       id: data.length + 1,
-      mark: 'Baskets',
+      mark: dataForm.get('brand'),
       imageUrl: nb2002,
       SKU: dataForm.get('SKU'),
       title: dataForm.get('item'),
@@ -49,9 +49,9 @@ export default function AddProductForm({ open, onClose, onSave, data }) {
             margin='normal'
             required
             fullWidth
-            id='Category'
-            label='Category keywords'
-            name='Category'
+            id='brand'
+            label='Brand'
+            name='brand'
             autoFocus
           />
           <TextField

@@ -58,19 +58,19 @@ export const data = [
     description: 'Barely worn blue suede Adidas Gazelle size 41',
     status: 'sold',
   },
-  {
-    type: 'Baskets',
-    id: 5,
-    SKU: 785465,
-    gUrl: 'https://michel-saba.github.io/Pay-and-Ship-mockup/?p=5',
-    imageUrl: sneakers_zoro,
-    mark: 'sneakers',
-    title: 'Sneakers One Piece Zoro',
-    price: 65,
-    description:
-      'discover all of our exclusive sneakers in our brand new website! Delivery guaranteed everywhere in France in less than a week!',
-    status: 'available',
-  },
+  // {
+  //   type: 'Baskets',
+  //   id: 5,
+  //   SKU: 785465,
+  //   gUrl: 'https://michel-saba.github.io/Pay-and-Ship-mockup/?p=5',
+  //   imageUrl: sneakers_zoro,
+  //   mark: 'sneakers',
+  //   title: 'Sneakers One Piece Zoro',
+  //   price: 65,
+  //   description:
+  //     'discover all of our exclusive sneakers in our brand new website! Delivery guaranteed everywhere in France in less than a week!',
+  //   status: 'available',
+  // },
 
   {
     type: 'Baskets',
