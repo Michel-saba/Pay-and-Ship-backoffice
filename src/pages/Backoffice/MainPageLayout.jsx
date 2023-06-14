@@ -72,11 +72,7 @@ export default function MainPageLayout({ theme, onSignOutUser }) {
           ></AddProductForm>
 
           {dataList && (
-            <ProductsTable
-              data={dataList}
-              handleOpenCarte={handleOpenCarte}
-              // handleOpenLabel={handleOpenLabel}
-            />
+            <ProductsTable data={dataList} handleOpenCarte={handleOpenCarte} />
           )}
         </Main>
         {selectedItem && (

@@ -18,9 +18,8 @@ const defaultTheme = createTheme();
 
 export default function SignIn({ onSignIn }) {
   const handleSubmit = (event) => {
-    onSignIn();
     event.preventDefault();
-    //  const data = new FormData(event.currentTarget);
+    onSignIn();
   };
 
   return (
@@ -34,9 +33,6 @@ export default function SignIn({ onSignIn }) {
             alignItems: 'center',
           }}
         >
-          {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <img />
-          </Avatar> */}
           <img src={dpdLogo} alt='dpd logo' />
           <Typography component='h1' variant='h5'>
             Welcome to Pay & Ship - BackOffice

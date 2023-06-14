@@ -12,6 +12,7 @@ import nb2002 from '../images/NB-2002-Mule4.png';
 export default function AddProductForm({ open, onClose, onSave, data }) {
   const handleSubmit = (event) => {
     event.preventDefault();
+
     const dataForm = new FormData(event.currentTarget);
     const new_product = {
       type: dataForm.get('brand'),
@@ -34,12 +35,7 @@ export default function AddProductForm({ open, onClose, onSave, data }) {
     <Dialog open={open}>
       <DialogTitle> add new product to the list</DialogTitle>
       <DialogContent>
-        <Box
-          component='form'
-          onSubmit={handleSubmit}
-          noValidate
-          sx={{ mt: 1, p: 1 }}
-        >
+        <Box component='form' onSubmit={handleSubmit} sx={{ mt: 1, p: 1 }}>
           <TextField
             margin='normal'
             required
