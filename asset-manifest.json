@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/Pay-and-Ship-backoffice/static/css/main.e6c13ad2.css",
-    "main.js": "/Pay-and-Ship-backoffice/static/js/main.7a5e2f35.js",
+    "main.js": "/Pay-and-Ship-backoffice/static/js/main.14e99627.js",
     "static/js/787.854f3c0d.chunk.js": "/Pay-and-Ship-backoffice/static/js/787.854f3c0d.chunk.js",
     "static/media/NB-2002-Mule4.png": "/Pay-and-Ship-backoffice/static/media/NB-2002-Mule4.cf4f951c1571f41c94d2.png",
     "static/media/Nike-x-2.png": "/Pay-and-Ship-backoffice/static/media/Nike-x-2.6e2958a6fa81616f4861.png",
     "static/media/label_example.png": "/Pay-and-Ship-backoffice/static/media/label_example.c003c63c377418b7cede.png",
-    "static/media/sneakers_zoro.png": "/Pay-and-Ship-backoffice/static/media/sneakers_zoro.f11f5d0229d4c42a24e0.png",
     "static/media/NB-550-2.jpeg": "/Pay-and-Ship-backoffice/static/media/NB-550-2.4ede86060dc2ee6f8b96.jpeg",
     "static/media/nanox3.webp": "/Pay-and-Ship-backoffice/static/media/nanox3.e99d10d760d21c783829.webp",
     "static/media/Adidas-Gazelle-3.avif": "/Pay-and-Ship-backoffice/static/media/Adidas-Gazelle-3.0f2895c78cad2bf21d78.avif",
@@ -15,11 +14,11 @@
     "static/media/nike-dunk-low2.jpeg": "/Pay-and-Ship-backoffice/static/media/nike-dunk-low2.376815937c1fa9a5e854.jpeg",
     "index.html": "/Pay-and-Ship-backoffice/index.html",
     "main.e6c13ad2.css.map": "/Pay-and-Ship-backoffice/static/css/main.e6c13ad2.css.map",
-    "main.7a5e2f35.js.map": "/Pay-and-Ship-backoffice/static/js/main.7a5e2f35.js.map",
+    "main.14e99627.js.map": "/Pay-and-Ship-backoffice/static/js/main.14e99627.js.map",
     "787.854f3c0d.chunk.js.map": "/Pay-and-Ship-backoffice/static/js/787.854f3c0d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.7a5e2f35.js"
+    "static/js/main.14e99627.js"
   ]
 }
