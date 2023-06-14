@@ -4,11 +4,7 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { DataGrid } from '@mui/x-data-grid';
 import labelExample from '../images/label_example.png';
 
-export default function ProductsTable({
-  handleOpenCarte,
-  handleOpenLabel,
-  data,
-}) {
+export default function ProductsTable({ handleOpenCarte, data }) {
   const printLabel = () => {
     const my_window = window.open(labelExample, 'delivery label');
     my_window.print();
@@ -18,18 +14,15 @@ export default function ProductsTable({
     {
       field: 'id',
       headerName: 'ID',
-      // width: '10%'
     },
     {
       field: 'mark',
       headerName: 'Brand',
-      // width: '20%',
       // editable: true,
     },
     {
       field: 'SKU',
       headerName: 'SKU',
-      // width: '20%',
       // editable: true,
     },
     {
@@ -41,7 +34,7 @@ export default function ProductsTable({
     {
       field: 'price',
       headerName: 'Price',
-      //  width: '25%',
+
       // editable: true,
       sortable: true,
     },

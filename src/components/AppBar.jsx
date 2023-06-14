@@ -3,16 +3,17 @@ import { styled } from '@mui/material/styles';
 import MuiAppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
+// import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Grow from '@mui/material/Grow';
-import Paper from '@mui/material/Paper';
-import Popper from '@mui/material/Popper';
-import MenuItem from '@mui/material/MenuItem';
-import MenuList from '@mui/material/MenuList';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+// import ButtonGroup from '@mui/material/ButtonGroup';
+// import ClickAwayListener from '@mui/material/ClickAwayListener';
+// import Grow from '@mui/material/Grow';
+// import Paper from '@mui/material/Paper';
+// import Popper from '@mui/material/Popper';
+// import MenuItem from '@mui/material/MenuItem';
+// import MenuList from '@mui/material/MenuList';
+import dpdLogo from '../images/dpd_logo.png';
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -22,19 +23,19 @@ const AppBar = styled(MuiAppBar, {
 const appToolBarHeight = 100;
 
 export default function AppBarMenu({ onSignOutUser }) {
-  const anchorRef = React.useRef(null);
-  const [open, setOpen] = React.useState(false);
+  // const anchorRef = React.useRef(null);
+  // const [open, setOpen] = React.useState(false);
 
-  const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
-  const handleClose = (event) => {
-    setOpen(false);
-  };
-  const handleLogOutClick = () => {
-    setOpen(false);
-    onSignOutUser();
-  };
+  // const handleToggle = () => {
+  //   setOpen((prevOpen) => !prevOpen);
+  // };
+  // const handleClose = (event) => {
+  //   setOpen(false);
+  // };
+  // const handleLogOutClick = () => {
+  //   setOpen(false);
+  //   onSignOutUser();
+  // };
   return (
     <AppBar
       position='fixed'
@@ -51,11 +52,9 @@ export default function AppBarMenu({ onSignOutUser }) {
         <Typography variant='h6'>{'Products management'}</Typography>
       </Toolbar>
 
-      <Box
-        id='box'
-        sx={{ display: { xs: 'none', md: 'flex' }, paddingInline: '20px' }}
-      >
-        {' '}
+      <Box id='box' style={{ display: 'flex' }}>
+        <img src={dpdLogo} alt='dpd logo' style={{ height: '100px' }} />
+        {/* {' '}
         <ButtonGroup ref={anchorRef}>
           <IconButton
             size='large'
@@ -103,7 +102,7 @@ export default function AppBarMenu({ onSignOutUser }) {
               </Paper>
             </Grow>
           )}
-        </Popper>
+        </Popper> */}
       </Box>
     </AppBar>
   );
