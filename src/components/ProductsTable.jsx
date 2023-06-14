@@ -1,13 +1,9 @@
 import * as React from 'react';
-// import Box from '@mui/material/Box';
-
 import IconButton from '@mui/material/IconButton';
-// import EditIcon from '@mui/icons-material/Edit';
-// import DeleteIcon from '@mui/icons-material/Delete';
-// import SaveIcon from '@mui/icons-material/Save';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { DataGrid } from '@mui/x-data-grid';
 import labelExample from '../images/label_example.png';
+
 export default function ProductsTable({
   handleOpenCarte,
   handleOpenLabel,
@@ -77,37 +73,6 @@ export default function ProductsTable({
         </IconButton>
       ),
     },
-    // {
-    //   field: 'Edit',
-    //   headerName: 'Edit',
-    //   width: 80,
-    //   renderCell: () => (
-    //     <IconButton color='inherit'>
-    //       <EditIcon />
-    //     </IconButton>
-    //   ),
-    // },
-    // {
-    //   field: 'delete',
-    //   headerName: 'Delete',
-    //   width: 80,
-    //   // onRowClick:()=>console.log(row),
-    //   renderCell: () => (
-    //     <IconButton color='inherit'>
-    //       <DeleteIcon />
-    //     </IconButton>
-    //   ),
-    // },
-    // {
-    //   field: 'update',
-    //   headerName: 'Update',
-    //   width: 80,
-    //   renderCell: () => (
-    //     <IconButton color='inherit'>
-    //       <SaveIcon />
-    //     </IconButton>
-    //   ),
-    // },
   ];
 
   return (
@@ -115,8 +80,40 @@ export default function ProductsTable({
       rows={rows}
       columns={columns}
       onRowDoubleClick={handleOpenCarte}
-      initialState={{}}
-      sx={{ height: '450px' }}
+
+      // sx={{ height: '60%' }}
     />
   );
 }
+
+// {
+//   field: 'Edit',
+//   headerName: 'Edit',
+//   width: 80,
+//   renderCell: () => (
+//     <IconButton color='inherit'>
+//       <EditIcon />
+//     </IconButton>
+//   ),
+// },
+// {
+//   field: 'delete',
+//   headerName: 'Delete',
+//   width: 80,
+//   // onRowClick:()=>console.log(row),
+//   renderCell: () => (
+//     <IconButton color='inherit'>
+//       <DeleteIcon />
+//     </IconButton>
+//   ),
+// },
+// {
+//   field: 'update',
+//   headerName: 'Update',
+//   width: 80,
+//   renderCell: () => (
+//     <IconButton color='inherit'>
+//       <SaveIcon />
+//     </IconButton>
+//   ),
+// },

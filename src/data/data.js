@@ -6,7 +6,6 @@ import cortez from '../images/nike-cortez.webp';
 import nb550 from '../images/NB-550-2.jpeg';
 import nb2002 from '../images/NB-2002-Mule4.png';
 import NLD from '../images/nike-dunk-low2.jpeg';
-import sneakers_zoro from '../images/sneakers_zoro.png';
 
 export const data = [
   {
